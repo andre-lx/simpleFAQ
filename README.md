@@ -46,7 +46,7 @@ alias faq='~/Documents/simpleFAQ/faq.sh'
 
 ## Usage
 
-The easiest way to use this is to have always an open cli window just for the faq.
+The easiest way to use the project is to have always an open cli window just for the faq.
 
 Help
 ```
@@ -109,5 +109,10 @@ Assuming that you use one specific CLI window only for the faq and since the pro
 
 The biggest goal of the project is all about simplicity.
 
-After a month of use it worked as expected, every day and on every project.
+Easy to use and fast to edit.
 
+Any ideias, please let me know. 
+
+Given its simplicity, I do not know if you can find any errors. 
+
+Open an issue to help in any way.
