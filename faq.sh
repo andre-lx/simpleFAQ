@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source simplefaq.cfg
+source $(dirname $0)/simplefaq.cfg
 
 clear
 
