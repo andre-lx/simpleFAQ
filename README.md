@@ -107,9 +107,7 @@ Assuming that you use one specific CLI window only for the faq and since the pro
 
 ## Contributing
 
-The biggest goal of the project is all about simplicity.
-
-Easy to use and fast to edit.
+The biggest goal of the project is all about simplicity. Easy to check and fast to edit.
 
 Any ideias, please let me know. 
 
