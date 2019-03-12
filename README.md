@@ -111,6 +111,4 @@ The biggest goal of the project is all about simplicity. Easy to check and fast 
 
 Any ideias, please let me know. 
 
-Given its simplicity, I do not know if you can find any errors. 
-
 Open an issue to help in any way.
