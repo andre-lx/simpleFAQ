@@ -1,18 +1,47 @@
 #!/bin/bash
 
-source $(dirname $0)/simplefaq.cfg
-
-clear
-
-echo -e '\e[32m'
-if [ "$1" == "help" ] || [ "$1" == "" ]; then
+help() {
+   echo -e '\e[32m'
    echo "		faq help - this view
    		faq SERVICE - view service faq
                 faq SERVICE new - open new service on vim 
    	 	faq SERVICE edit - open existing service on vim
    		faq SERVICE rm - remove service if exists
-   	 	faq ls - list service files"
+   	 	faq ls - list service files
+
+			options
+		-d <path> - base directory"
    echo -e '\e[0m'
+}
+
+while getopts ":d:" opt; do
+	case $opt in
+		d)
+			export DIR=$OPTARG
+			shift $((OPTIND-1))
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			;;
+		:)
+			echo "Option -$OPTARG requires an argument." >&2
+			;;
+		*)
+			help
+			;;
+	esac
+done
+
+source $(dirname $0)/simplefaq.cfg
+
+clear
+
+#echo "arguments: $@"
+#sleep 10
+
+echo -e '\e[32m'
+if [ "$1" == "help" ] || [ "$1" == "" ]; then
+   help
    exit
 elif [ "$1" == "ls" ]; then
    ls $servicespath/
