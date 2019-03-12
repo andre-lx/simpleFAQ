@@ -94,6 +94,12 @@ Create new service. This will open the file in vim. Example: service docker new
 faq docker new
 ```
 
+Remove service. **This will delete the file.** Example: service docker rm
+
+```
+faq docker rm
+```
+
 Search on services:
 
 ```
