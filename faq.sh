@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source simplefaq.cfg
+
 clear
 
 echo -e '\e[32m'
@@ -12,23 +14,25 @@ if [ "$1" == "help" ] || [ "$1" == "" ]; then
    echo -e '\e[0m'
    exit
 elif [ "$1" == "ls" ]; then
-   ls ~/Documents/myFaq/services/
+   ls $servicespath/
    echo -e '\e[0m'
    exit
 fi
-   
-if [ -e ~/Documents/myFaq/services/$1 ];
+
+echo $servicespath/$1 
+
+if [ -e $servicespath/$1 ];
 then
    if [ "$2" == "edit" ]; then
-      vi ~/Documents/myFaq/services/$1
+      vi $servicespath/$1
    elif [ "$2" == "new" ]; then   
       echo -e "\e[31mService already on faq! \nEdit service with 'faq serviceName edit' \e[0m"
    else
-      cat ~/Documents/myFaq/services/$1
+      cat $servicespath/$1
    fi
 else
    if [ "$2" == "new" ]; then
-      vi ~/Documents/myFaq/services/$1
+      vi $servicespath/$1
    else
       echo -e "\e[31mService not found on faq! \nCreate new service with 'faq serviceName new' \e[0m"
    fi
