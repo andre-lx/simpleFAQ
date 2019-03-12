@@ -19,8 +19,6 @@ elif [ "$1" == "ls" ]; then
    exit
 fi
 
-echo $servicespath/$1 
-
 if [ -e $servicespath/$1 ];
 then
    if [ "$2" == "edit" ]; then
