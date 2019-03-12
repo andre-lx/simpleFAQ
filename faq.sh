@@ -39,8 +39,10 @@ else
    fi
 fi
 
-echo "
+echo -e '\e[0m'
+
+echo -e "\e[96m
 Available services:"
 ls $servicespath/
-
 echo -e '\e[0m'
+
