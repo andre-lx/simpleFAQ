@@ -4,7 +4,7 @@ SimpleFAQ is the most basic CLI help assistant for any job you are currently wor
 
 The services folder can be used for anything. You can write a service that is docker, or linux, but you can also use for a project, framework, config parameters, etc...
  
-**The services present in the project services folder are present only for example.**
+**The services present in the project services folder are only examples.**
  
 ## Installation
 
