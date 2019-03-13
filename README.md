@@ -55,7 +55,7 @@ output:
 		fq help - this view
 		fq dir DIR - set services dir
    		fq SERVICE - view service faq
-        fq SERVICE new - open new service on vim 
+        	fq SERVICE new - open new service on vim 
    	 	fq SERVICE edit - open existing service on vim
    		fq SERVICE rm - remove service if exists
    	 	fq ls - list service files
