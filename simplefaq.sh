@@ -39,14 +39,14 @@ elif [ "$1" == "ls" ]; then
 elif [ "$1" == "dir" ]; then
    
    if [ "$2" != "" ]; then
-		export SERVICESDIR=$2
-		lsservices
-		return
-	else
-		echo -e "\n\e[31mPlease define a valid path. \e[0m
-		"
-		return
-	fi
+	export SERVICESDIR=$2
+	lsservices
+	return
+   else
+	echo -e "\n\e[31mPlease define a valid path. \e[0m
+	"
+	return
+   fi
 fi
 
 echo -e '\e[32m'
