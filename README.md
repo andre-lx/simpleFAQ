@@ -4,7 +4,7 @@ SimpleFAQ is the most basic CLI help assistant for any job you are currently wor
 
 The services folder can be used for anything. You can write a service that is docker, or linux, but you can also use for a project, framework, config parameters, etc...
  
-**The services present in the project are just to show you how you can organize your services files.**
+The services present in the project are just to show you how you can organize your services files.
  
 ## Installation
 
@@ -16,23 +16,23 @@ git clone https://github.com/andre-lx/simpleFAQ
 
 #### Add alias
 
-Use this to run the script as 'fq ls' , 'fq docker edit', .... and to run the script from any path and even after restarting the server/computer, instead of typing always 'source simplefaq.sh ls', 'source simplefaq.sh docker edit'
+Use this to run the script as 'fq ls' , 'fq docker edit', ... and to run the script from any path and even after reboot the server/computer, instead of typing always 'source simplefaq.sh ls', 'source simplefaq.sh docker edit', ...
 
-If you only want to run this temporarily just copy and past the step two to your CLI instead of changing the files. This action will be lost after restart.
+If you only want to run this temporarily just copy and past the step two to your CLI instead of changing the files. This action will be lost after reboot.
 
-1 - add this to the file "~/.bashrc" if it's not present:
+1. add this to the file "~/.bashrc" if it's not present:
 ```
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 ```
 
-2 - add alias to ~/.bash_aliases with the correct path to your simplefaq.sh file:
+2. add alias to ~/.bash_aliases with the correct path to your simplefaq.sh file:
 ```
 alias fq='source ~/Documents/simpleFAQ/simplefaq.sh'
 ```
 
-3 - run bashrc to update alias
+3. run bashrc to update alias
 ```
 source ~/.bashrc
 ```
@@ -66,7 +66,7 @@ output:
 		services dir: ~/Documents/simpleFAQ/services_example
 ```
 
-Config services path - default is the services_example folder:
+Config services path - default is the services_example folder present in the project:
 ```
 fq dir ~/Documents/simpleFAQ/services_example
 ```
@@ -116,7 +116,7 @@ output:
     docker exec -it <container_id> /bin/bash
 ```
 
-Assuming that you use one specific CLI window only for the faq and since the program always clear the window you can easily search using the search present in the CLI.
+Assuming that you use one specific CLI window only for the faq and since the program always clear the window you can easily search using the search feature present in the CLI.
 
 ## Contributing
 
