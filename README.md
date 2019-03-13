@@ -4,27 +4,19 @@ SimpleFAQ is the most basic CLI help assistant for any job you are currently wor
 
 The services folder can be used for anything. You can write a service that is docker, or linux, but you can also use for a project, framework, config parameters, etc...
  
-**The services present in the project services folder are only examples.**
+**The services present in the project are just to show you how you can organize your services.**
  
 ## Installation
 
-#### Download and Config
+#### Download
 
 ```
 git clone https://github.com/andre-lx/simpleFAQ
 ```
 
-Change the **simplefaq.cfg** file to your specification.
-
-Each service of the faq are available in the /services folder.
-
-Imagine that you download the project to your Documents folder. Change the config file to:
-
-```
-servicespath=~/Documents/simpleFAQ/services
-```
-
 #### Add alias
+
+Use this to run the script as 'fq ls' , 'fq docker edit', .... and to run the script from everywhere, instead of typing always 'source simplefaq.sh ls', 'source simplefaq.sh docker edit'
 
 1 - add this to the file "~/.bashrc" if it's not present:
 ```
@@ -35,14 +27,19 @@ fi
 
 2 - add alias to ~/.bash_aliases with the correct path:
 ```
-alias faq='~/Documents/simpleFAQ/faq.sh'
+alias fq='source ~/Documents/simpleFAQ/simplefaq.sh'
 ```
 
 3 - run bashrc to update alias
 ```
-. ~/.bashrc
+source ~/.bashrc
 ```
 
+If you don't want to use fq alias, use the script as: 
+
+```
+source simplefaq.sh help 
+```
 
 ## Usage
 
@@ -50,32 +47,40 @@ The easiest way to use the project is to have always an open cli window just for
 
 Help
 ```
-faq
+fq
 or
-faq help
+fq help
 
 output:
-       faq help - this view
-       faq SERVICE - view service faq
-       faq SERVICE edit - open existing service on vim
-       faq SERVICE new - open new service on vim
-       faq ls - list service files
-
+		fq help - this view
+		fq dir DIR - set services dir
+   		fq SERVICE - view service faq
+        fq SERVICE new - open new service on vim 
+   	 	fq SERVICE edit - open existing service on vim
+   		fq SERVICE rm - remove service if exists
+   	 	fq ls - list service files
+	
+		---
+		services dir: ~/Documents/simpleFAQ/services_example
 ```
 
+Config services path - default is the services_example folder:
+```
+fq dir ~/Documents/simpleFAQ/services_example
+```
 
 List all existent services (files in services folder)
 ```
-faq ls
+fq ls
 
 output:
     aws ceph docker docker-compose farm git linux scar ssh
 
 ```
 
-Open specific service. Example: service docker
+Open specific service. Example: docker service file
 ```
-faq docker
+fq docker
 
 output:
     #SSH TO CONTAINER
@@ -83,27 +88,27 @@ output:
 
 ```
 
-Edit existent service. This will open the file in vim. Example: service docker edit
+Edit existent service. This will open the file in vim. Example: edit docker service 
 ```
-faq docker edit
-```
-
-Create new service. This will open the file in vim. Example: service docker new
-
-```
-faq docker new
+fq docker edit
 ```
 
-Remove service. **This will delete the file.** Example: service docker rm
+Create new service. This will open the file in vim. Example: new docker2 service
 
 ```
-faq docker rm
+fq docker2 new
+```
+
+Remove service. **This will delete the file.** Example: remove docker2 service
+
+```
+fq docker2 rm
 ```
 
 Search on services:
 
 ```
-faq docker | grep exec
+fq docker | grep exec
 
 output:
     docker exec -it <container_id> /bin/bash
