@@ -16,7 +16,7 @@ git clone https://github.com/andre-lx/simpleFAQ
 
 #### Add alias
 
-Use this to run the script as 'fq ls' , 'fq docker edit', .... and to run the script from everywhere and even after restarting the server/computer, instead of typing always 'source simplefaq.sh ls', 'source simplefaq.sh docker edit'
+Use this to run the script as 'fq ls' , 'fq docker edit', .... and to run the script from any path and even after restarting the server/computer, instead of typing always 'source simplefaq.sh ls', 'source simplefaq.sh docker edit'
 
 If you only want to run this temporarily just copy and past the step two to your CLI instead of changing the files. This action will be lost after restart.
 
@@ -27,7 +27,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 ```
 
-2 - add alias to ~/.bash_aliases with the correct path:
+2 - add alias to ~/.bash_aliases with the correct path to your simplefaq.sh file:
 ```
 alias fq='source ~/Documents/simpleFAQ/simplefaq.sh'
 ```
