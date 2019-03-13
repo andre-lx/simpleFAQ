@@ -101,7 +101,7 @@ Create new service. This will open the file in vim. Example: new docker2 service
 fq docker2 new
 ```
 
-Remove service. **This will delete the file.** Example: remove docker2 service
+Remove service. **This will delete the service file.** Example: remove docker2 service
 
 ```
 fq docker2 rm
