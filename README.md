@@ -118,6 +118,10 @@ output:
 
 Assuming that you use one specific CLI window only for the faq and since the program always clear the window you can easily search using the search feature present in the CLI.
 
+## Quick sample
+
+[![asciicast](https://asciinema.org/a/Wr3ri3wJRw8e5exEMSpOMZFS8.svg)](https://asciinema.org/a/Wr3ri3wJRw8e5exEMSpOMZFS8)
+
 ## Contributing
 
 The biggest goal of the project is all about simplicity. Easy to check and fast to edit.
