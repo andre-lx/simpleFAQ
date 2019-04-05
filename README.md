@@ -1,5 +1,5 @@
 # simpleFAQ
-
+ 
 SimpleFAQ is the most basic CLI help assistant for any job you are currently working on. Completely simple and adjustable for your needs. You can write anything using vim, such as commands, procedures, tasks, or even specify docs for specific actions.
 
 The services folder can be used for anything. You can write a service that is docker, or linux, but you can also use for a project, framework, config parameters, etc...
